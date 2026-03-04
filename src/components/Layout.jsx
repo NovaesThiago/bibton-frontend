@@ -396,7 +396,7 @@ const DashboardContent = ({
             </div>
             
             <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
-              Sistema de Biblioteca Moderno • Engenharia de Software II
+              Sistema de Biblioteca Moderno • Bibton
             </p>
             
             <div className="mt-4 md:mt-0">
