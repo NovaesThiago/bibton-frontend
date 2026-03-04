@@ -449,37 +449,6 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-
-      {/* Informações do Backend */}
-      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div>
-            <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-              Informações de Conexão
-            </h4>
-            <div className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-              <div className="flex items-center space-x-2">
-                <div className={`w-2 h-2 rounded-full ${backendStatus === 'ok' ? 'bg-green-500' : 'bg-red-500'}`}></div>
-                <span>
-                  Status: {backendStatus === 'ok' ? '✅ Conectado' : '❌ Não conectado'}
-                </span>
-              </div>
-              <p>• Backend URL: {import.meta.env.VITE_API_URL || 'http://localhost:3000'}</p>
-              <p>• Total de usuários: {stats.usuarios}</p>
-              <p>• Total de livros: {stats.livros}</p>
-              <p>• Empréstimos ativos: {stats.emprestimosAtivos}</p>
-            </div>
-          </div>
-          <button
-            onClick={fetchDashboardData}
-            disabled={loading}
-            className="px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-vue-green to-vue-blue rounded-lg hover:shadow-lg transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center space-x-2 self-start md:self-center"
-          >
-            <RefreshCw size={16} className={loading ? 'animate-spin' : ''} />
-            <span>{loading ? 'Atualizando...' : 'Atualizar Dados'}</span>
-          </button>
-        </div>
-      </div>
     </div>
   )
 }
